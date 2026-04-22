@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const portfolioPath = (path) => `${import.meta.env.BASE_URL}portfolio/${path}`
+
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
@@ -12,73 +14,73 @@ const navLinks = [
 const skills = [
   {
     name: 'HTML5',
-    image: '/portfolio/images/icons8-html-5-50.png',
+    image: portfolioPath('images/icons8-html-5-50.png'),
     alt: 'HTML5 logo',
     level: 'Intermediate',
   },
   {
     name: 'CSS3',
-    image: '/portfolio/images/icons8-css-logo-50.png',
+    image: portfolioPath('images/icons8-css-logo-50.png'),
     alt: 'CSS3 logo',
     level: 'Intermediate',
   },
   {
     name: 'JavaScript',
-    image: '/portfolio/images/icons8-js-50.png',
+    image: portfolioPath('images/icons8-js-50.png'),
     alt: 'JavaScript logo',
     level: 'Intermediate',
   },
   {
     name: 'GitLab',
-    image: '/portfolio/images/icons8-gitlab-50.png',
+    image: portfolioPath('images/icons8-gitlab-50.png'),
     alt: 'GitLab logo',
     level: 'Intermediate',
   },
   {
     name: 'GitHub',
-    image: '/portfolio/images/icons8-github.png',
+    image: portfolioPath('images/icons8-github.png'),
     alt: 'GitHub logo',
     level: 'Intermediate',
   },
   {
     name: 'VS Code',
-    image: '/portfolio/images/icons8-visual-studio-logo-50.png',
+    image: portfolioPath('images/icons8-visual-studio-logo-50.png'),
     alt: 'Visual Studio Code logo',
     level: 'Intermediate',
   },
   {
     name: 'Node.js',
-    image: '/portfolio/images/icons8-nodejs-64.png',
+    image: portfolioPath('images/icons8-nodejs-64.png'),
     alt: 'Node.js skill badge',
     level: 'Intermediate',
   },
   {
     name: 'ExpressJS',
-    image: '/portfolio/images/icons8-express-js-50.png',
+    image: portfolioPath('images/icons8-express-js-50.png'),
     alt: 'Express skill badge',
     level: 'Intermediate',
   },
   {
     name: 'MongoDB',
-    image: '/portfolio/images/icons8-mongodb-24.png',
+    image: portfolioPath('images/icons8-mongodb-24.png'),
     alt: 'MongoDB skill badge',
     level: 'Intermediate',
   },
   {
     name: 'Postman',
-    image: '/portfolio/images/icons8-postman-32.png',
+    image: portfolioPath('images/icons8-postman-32.png'),
     alt: 'Postman skill badge',
     level: 'Intermediate',
   },
   {
     name: 'React',
-    image: '/portfolio/images/icons8-react-24.png',
+    image: portfolioPath('images/icons8-react-24.png'),
     alt: 'React skill badge',
     level: 'Intermediate',
   },
   {
     name: 'Tailwind CSS',
-    image: '/portfolio/images/icons8-tailwind-css-48.png',
+    image: portfolioPath('images/icons8-tailwind-css-48.png'),
     alt: 'Tailwind CSS skill badge',
     level: 'Intermediate',
   },
@@ -87,7 +89,7 @@ const skills = [
 const projects = [
   {
     name: 'QuickCompare App',
-    image: '/portfolio/images/project1.png',
+    image: portfolioPath('images/project1.png'),
     alt: 'Screenshot of the QuickCompare command-line application',
     description:
       'A command-line app for managing product data and comparing unit prices instantly so users can choose the best-value product.',
@@ -100,7 +102,7 @@ const projects = [
   },
   {
     name: 'Web Dev Portfolio',
-    image: '/portfolio/images/project2.png',
+    image: portfolioPath('images/project2.png'),
     alt: 'Screenshot of the original personal web development portfolio',
     description:
       'My first personal portfolio website built to present my background, showcase my skills, and document my growth as a developer.',
@@ -112,7 +114,7 @@ const projects = [
   },
   {
     name: 'Deal or No Deal Fan Game',
-    image: '/portfolio/images/logo.png',
+    image: portfolioPath('images/logo.png'),
     alt: 'Logo used for the Deal or No Deal browser game project',
     description:
       'A browser game inspired by Deal or No Deal with round-based case opening, banker offers, and a dramatic player experience.',
@@ -124,7 +126,7 @@ const projects = [
   },
   {
     name: 'Shopping App API',
-    image: '/portfolio/images/icons8-rocket-64.png',
+    image: portfolioPath('images/icons8-rocket-64.png'),
     alt: 'Rocket icon representing the shopping app API project',
     description:
       'An Express-based shopping app where users can order items and receive payment instructions by email, with admin product management tools.',
@@ -137,7 +139,7 @@ const projects = [
   },
   {
     name: 'Air Quality Tracker',
-    image: '/portfolio/images/icons8-cv.png',
+    image: portfolioPath('images/icons8-cv.png'),
     alt: 'Document icon representing the air quality tracker project',
     description:
       'A React application for searching air quality data, checking locations, and viewing saved cities and station details.',
@@ -153,19 +155,19 @@ const projects = [
 const contactLinks = [
   {
     name: 'LinkedIn',
-    image: '/portfolio/images/icons8-linkedin.png',
+    image: portfolioPath('images/icons8-linkedin.png'),
     alt: 'LinkedIn logo',
     url: 'https://www.linkedin.com/in/chareen-joy-guzman',
   },
   {
     name: 'GitHub',
-    image: '/portfolio/images/icons8-github.png',
+    image: portfolioPath('images/icons8-github.png'),
     alt: 'GitHub logo',
     url: 'https://github.com/soyoung23-debug',
   },
   {
     name: 'Discord',
-    image: '/portfolio/images/icons8-discord-50.png',
+    image: portfolioPath('images/icons8-discord-50.png'),
     alt: 'Discord logo',
     url: 'https://discord.com/users/1390894243249389689',
   },
@@ -194,7 +196,7 @@ function App() {
             onClick={handleNavClick}
           >
             <img
-              src="/portfolio/images/logo.png"
+              src={portfolioPath('images/logo.png')}
               alt="Chareen portfolio logo"
               width="30"
               height="30"
@@ -275,7 +277,7 @@ function App() {
           <div className="flex justify-center lg:justify-end">
             <div className="aspect-[4/5] w-full max-w-sm rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(217,199,186,0.85),rgba(248,245,240,0.95))] p-4 shadow-[0_24px_44px_rgba(79,70,62,0.16),inset_0_1px_0_rgba(255,255,255,0.8)]">
               <img
-                src="/portfolio/images/profile pic.jpeg"
+                src={portfolioPath('images/profile pic.jpeg')}
                 alt="Portrait of Chareen Guzman"
                 className="h-full w-full rounded-[1.4rem] object-cover"
               />
@@ -313,7 +315,7 @@ function App() {
             </div>
             <a
               className={`${linkButtonClassName} bg-[#a87c68] text-white shadow-[0_10px_20px_rgba(168,124,104,0.25)]`}
-              href="/portfolio/file/Chareen%20Joy%20S.%20Guzman%20-%20CV.pdf"
+              href={portfolioPath('file/Chareen%20Joy%20S.%20Guzman%20-%20CV.pdf')}
               target="_blank"
               rel="noreferrer"
             >
@@ -433,12 +435,12 @@ function App() {
           </p>
           <a
             className="mt-6 inline-flex w-full items-center gap-4 rounded-[1.3rem] border border-[#ded1c3] bg-[rgba(255,255,255,0.72)] px-5 py-4 no-underline transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_rgba(79,70,62,0.12)] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#8f5a4359]"
-            href="/portfolio/file/Chareen%20Joy%20S.%20Guzman%20-%20CV.pdf"
+            href={portfolioPath('file/Chareen%20Joy%20S.%20Guzman%20-%20CV.pdf')}
             target="_blank"
             rel="noreferrer"
           >
             <img
-              src="/portfolio/images/icons8-cv.png"
+              src={portfolioPath('images/icons8-cv.png')}
               alt="Resume document icon"
               className="h-11 w-11"
             />
