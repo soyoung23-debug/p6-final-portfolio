@@ -144,9 +144,7 @@ const projects = [
     description:
       'A React application for searching air quality data, checking locations, and viewing saved cities and station details.',
     stack: 'React, React Router, API Integration',
-    repoUrl:
-      'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p5-react-app',
-    liveUrl: 'https://p5-react-app-client.onrender.com/checklocation',
+    liveUrl: 'https://p5-react-app-client.onrender.com',
     liveLabel: 'Live Site',
   },
 ]
