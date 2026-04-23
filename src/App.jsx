@@ -131,6 +131,8 @@ const projects = [
     description:
       'An Express-based shopping app where users can order items and receive payment instructions by email, with admin product management tools.',
     stack: 'Node.js, Express, MongoDB',
+    repoUrl:
+      'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p4-node-app?ref_type=heads',
     liveUrl: 'https://p4-node-app-604d.onrender.com/',
     liveLabel: 'Live Site',
   },
@@ -141,6 +143,8 @@ const projects = [
     description:
       'A React application for searching air quality data, checking locations, and viewing saved cities and station details.',
     stack: 'React, React Router, API Integration',
+    repoUrl:
+      'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p5-react-app?ref_type=heads',
     liveUrl: 'https://p5-react-app-client.onrender.com',
     liveLabel: 'Live Site',
   },
@@ -388,15 +392,21 @@ function App() {
                   </h3>
                   <p className="mt-3 grow leading-7">{project.description}</p>
                 </div>
-                <div className="grid grid-cols-1 gap-3 px-[1.15rem] pb-[1.15rem] sm:grid-cols-2">
-                  <a
-                    className={`${linkButtonClassName} h-12 w-full bg-[#efe8e1] px-3 text-center text-[#312a24]`}
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Repository
-                  </a>
+                <div
+                  className={`grid grid-cols-1 gap-3 px-[1.15rem] pb-[1.15rem] ${
+                    project.repoUrl ? 'sm:grid-cols-2' : ''
+                  }`}
+                >
+                  {project.repoUrl ? (
+                    <a
+                      className={`${linkButtonClassName} h-12 w-full bg-[#efe8e1] px-3 text-center text-[#312a24]`}
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Repository
+                    </a>
+                  ) : null}
                   <a
                     className={`${linkButtonClassName} h-12 w-full bg-[#efe8e1] px-3 text-center text-[#312a24]`}
                     href={project.liveUrl}
