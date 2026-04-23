@@ -146,9 +146,8 @@ const projects = [
     stack: 'React, React Router, API Integration',
     repoUrl:
       'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p5-react-app',
-    liveUrl:
-      'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p5-react-app',
-    liveLabel: 'Project Files',
+    liveUrl: 'https://p5-react-app-client.onrender.com/checklocation',
+    liveLabel: 'Live Site',
   },
 ]
 
