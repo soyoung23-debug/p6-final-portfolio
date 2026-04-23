@@ -131,11 +131,8 @@ const projects = [
     description:
       'An Express-based shopping app where users can order items and receive payment instructions by email, with admin product management tools.',
     stack: 'Node.js, Express, MongoDB',
-    repoUrl:
-      'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p4-node-app',
-    liveUrl:
-      'https://gitlab.com/uplift-code-camp/students/batch-28/chareen/projects/-/tree/main/p4-node-app',
-    liveLabel: 'Project Files',
+    liveUrl: 'https://p4-node-app-604d.onrender.com/',
+    liveLabel: 'Live Site',
   },
   {
     name: 'Air Quality Tracker',
